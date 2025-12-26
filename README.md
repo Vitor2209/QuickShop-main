@@ -1,144 +1,156 @@
-A simple and efficient shopping cart management service built with modern technologies to ensure high performance, scalability, and clean architecture.
+# 🛒 Shopping Cart Management Service
 
-🔗 Table of Contents
+A simple and efficient shopping cart management service built with modern technologies, focused on **performance**, **scalability**, and **clean architecture**.
 
-About the Project
+This project demonstrates best practices in backend development using **Java**, **Spring Boot**, **Redis**, **MongoDB**, and **Docker**, following a clean and modular architecture.
 
-Technologies Used
+---
 
-Java 17
+## 📚 Table of Contents
 
-Lombok
+* [About the Project](#about-the-project)
+* [Main Goals](#main-goals)
+* [Technologies Used](#technologies-used)
+* [Features](#features)
+* [Project Architecture](#project-architecture)
+* [How to Run the Project](#how-to-run-the-project)
+* [Screenshots](#screenshots)
+* [Contributing](#contributing)
+* [License](#license)
 
-Redis
+---
 
-MongoDB
+## 📖 About the Project
 
-OpenFeign
+This project was developed as part of the **Java10x** program and aims to demonstrate the use of modern backend technologies to build a **scalable and efficient shopping cart system**.
 
-Docker
+The application integrates with an external product API, uses **Redis** for caching, **MongoDB** for data persistence, and follows clean architecture principles to ensure maintainability and scalability.
 
-External API
+---
 
-Features
+## 🎯 Main Goals
 
-Screenshots
+* Provide a smooth and efficient shopping cart experience
+* Reduce external API calls using smart caching strategies
+* Apply clean architecture and design best practices
+* Demonstrate real-world backend development patterns
+* Enable easy deployment using Docker
 
-How to Run the Project
+---
 
-Contributing
+## 🛠 Technologies Used
 
-License
+### Core Stack
 
-📖 About the Project
+* **Java 17** – Modern LTS version with performance and language improvements
+* **Spring Boot** – Application framework
+* **MongoDB** – NoSQL database for persistent storage
+* **Redis** – In-memory cache for fast access
+* **OpenFeign** – Declarative HTTP client for external APIs
 
-This project was developed as part of the Spring Boot module in the Java10x program.
-It is a shopping cart management service that integrates with an external API to provide a list of products.
-The architecture leverages Redis for caching, MongoDB for NoSQL persistence, and Docker for containerized deployment, ensuring performance, scalability, and maintainability.
+### DevOps & Tools
 
-🎯 Main Goals
+* **Docker & Docker Compose** – Containerized environment
+* **Maven** – Dependency and build management
 
-Provide a smooth and efficient shopping cart experience.
+---
 
-Reduce unnecessary calls to the external product API using smart caching.
+## ✨ Features
 
-Offer simple and scalable deployment using Docker containers.
+* 🛒 Product listing fetched from an external API
+* 🧠 Smart caching using Redis to reduce API calls
+* 🗄️ MongoDB persistence for shopping carts
+* 🔌 External API integration using OpenFeign
+* ⚡ High performance and scalable architecture
+* 🧩 Clean and modular codebase
 
-Demonstrate clean architecture and modern Java practices.
+---
 
-🛠 Technologies Used
-Java 17
+## 🧱 Project Architecture
 
-Modern LTS version of Java, featuring improved performance, stability, and language enhancements.
+```
+controller/
+ ├── CartController.java
+service/
+ ├── CartService.java
+ ├── ProductService.java
+repository/
+ ├── CartRepository.java
+client/
+ ├── ProductClient.java
+model/
+ ├── Cart.java
+ ├── Product.java
+config/
+ ├── RedisConfig.java
+```
 
-Documentation: https://openjdk.org/projects/jdk/17/
+---
 
-Lombok
+## 🚀 How to Run the Project
 
-Reduces boilerplate code by auto-generating getters, setters, constructors, and more.
+### ✅ Requirements
 
-Documentation: https://projectlombok.org/
+* Java 17+
+* Docker (recommended)
+* Maven (or Maven Wrapper)
 
-Redis
+---
 
-In-memory key-value store used as a caching layer to improve API response time and reduce external requests.
+### ▶️ Running with Docker (Recommended)
 
-Documentation: https://redis.io/docs/
-
-MongoDB
-
-NoSQL database used to persist shopping cart data with flexibility and scalability.
-
-Documentation: https://www.mongodb.com/docs/
-
-OpenFeign
-
-A declarative HTTP client that simplifies communication with external APIs and minimizes boilerplate.
-
-Documentation: https://github.com/OpenFeign/feign
-
-Docker
-
-Provides isolated and reproducible environments for running Redis, MongoDB, and the application itself.
-
-Documentation: https://docs.docker.com/
-
-Course reference: https://aluno.java10x.dev/209723-docker
-
-External API
-
-The project integrates with an external API to retrieve available products for the cart.
-
-Learn more about working with APIs: https://www.postman.com/api-documentation/
-
-✨ Features
-
-Product Listing — Display all products retrieved from an external API.
-
-Cart Management — Create, update, pay for, and delete shopping carts.
-
-Smart Caching with Redis — Avoid redundant API calls by caching product data.
-
-MongoDB Persistence — Stores cart data securely and efficiently.
-
-External API Integration — Fetch dynamic product information in real time.
-
-Docker Support — Run the entire stack using containerized services.
-
-📸 Screenshots
-🛒 Shopping Cart UI
-
-🧱 Project Architecture
-
-🚀 How to Run the Project
-📌 Requirements
-
-Java 17
-
-Docker (recommended)
-or
-Local installations of Redis and MongoDB
-
-Maven or mvnw wrapper
-
-▶️ Running with Docker Compose
+```bash
 docker-compose up -d
+```
 
-▶️ Running Locally (without Docker)
+This will start:
 
-Start Redis and MongoDB manually.
+* Application
+* Redis
+* MongoDB
 
-Run the application:
+---
 
+### ▶️ Running Locally (Without Docker)
+
+1. Start **MongoDB** and **Redis**
+2. Run the application:
+
+```bash
 ./mvnw spring-boot:run
+```
 
-🤝 Contributing
+---
+
+## 📸 Screenshots
+
+> You can add screenshots of:
+
+* API responses
+* Swagger UI
+* Application logs
+* Architecture diagram
+
+---
+
+## 🤝 Contributing
 
 Contributions are welcome!
-Feel free to fork the project, submit issues, or open pull requests.
 
-📄 License
+1. Fork the repository
+2. Create a new branch
+3. Commit your changes
+4. Open a Pull Request
 
-This project is licensed under the MIT License.
-See the LICENSE file for more details.
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+See the [LICENSE](LICENSE) file for more details.
+
+---
+
+✨ **This project demonstrates clean code, good architectural decisions, and modern backend practices — ideal for showcasing in a professional portfolio.**
+
 
